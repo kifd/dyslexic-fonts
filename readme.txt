@@ -1,4 +1,4 @@
-=== Extra User Data ===
+=== Dyslexic Fonts ===
 Contributors: keith_wp
 Donate Link: https://drakard.com/
 Tags: font, dyslexic font, custom font
