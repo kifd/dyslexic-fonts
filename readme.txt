@@ -3,7 +3,7 @@ Contributors: keith_wp
 Donate Link: https://drakard.com/
 Tags: font, dyslexic font, custom font
 Requires at least: 3.8 or higher
-Tested up to: 5.2.1
+Tested up to: 5.6 alpha-49135
 Stable tag: 0.16
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -37,6 +37,9 @@ It's very possible that font choice won't make a difference (https://www.dyslexi
 == Changelog ==
 
 = 0.16 =
+* Tested with WP 5.6 alpha-49135
+
+= 0.16 =
 * Initial release.
 * Bugfix: uses CSS :not selector to avoid classes with "icon" in them
 * Tested with WP 5.2.1
@@ -46,5 +49,4 @@ It's very possible that font choice won't make a difference (https://www.dyslexi
 
 
 == Upgrade Notice ==
-
 
