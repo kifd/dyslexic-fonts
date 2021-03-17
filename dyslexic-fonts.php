@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Dyslexic Fonts
-Version: 0.16
+Version: 0.17
 Plugin URI: 
 Description: Adds a checkbox to the User Profile screen, allowing logged-in users to change the fonts used across the site to a dyslexic friendly one (https://opendyslexic.com/).
 Author: Keith Drakard
-Author URI: http://drakard.com/
+Author URI: https://drakard.com/
 
 TODO: configurable CSS to apply the font - allow IDs and classes to be excluded, don't rely on !important
 TODO: if it's ever hosted on googlefonts etc, have an option to load from there instead
@@ -30,14 +30,37 @@ class DyslexicPlugin {
 	
 	public function add_font_face() {
 		global $current_user;
-		if ($current_user->ID AND get_user_meta($current_user->ID, '_more_readable', true)) {			
-			// NOTE: will not work on IE8 and below until I convert the .otf file to .ttf and then to .eot
-			// NOTE: v0.16 - and now won't anyway because I'm using :not() to avoid icons.
+		if ($current_user->ID AND get_user_meta($current_user->ID, '_more_readable', true)) {
 			echo '<style type="text/css">
-	@font-face { font-family:"OpenDyslexic";src:url("'.plugins_url('/fonts/OpenDyslexic-Regular.otf', __FILE__).'") format("opentype"); }
-	@font-face { font-family:"OpenDyslexic";src:url("'.plugins_url('/fonts/OpenDyslexic-Italic.otf', __FILE__).'") format("opentype"); font-style:italic; }
-	@font-face { font-family:"OpenDyslexic";src:url("'.plugins_url('/fonts/OpenDyslexic-Bold.otf', __FILE__).'") format("opentype"); font-weight:bold; }
-	@font-face { font-family:"OpenDyslexic";src:url("'.plugins_url('/fonts/OpenDyslexic-BoldItalic.otf', __FILE__).'") format("opentype"); font-style:italic;font-weight:bold; }
+@font-face {
+    font-family: "OpenDyslexic";
+    src: url("'.plugins_url('/fonts/opendyslexicalta-bold-webfont.woff2', __FILE__).'") format("woff2"),
+         url("'.plugins_url('/fonts/opendyslexicalta-bold-webfont.woff', __FILE__).'") format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "OpenDyslexic";
+    src: url("'.plugins_url('/fonts/opendyslexicalta-bolditalic-webfont.woff2', __FILE__).'") format("woff2"),
+         url("'.plugins_url('/fonts/opendyslexicalta-bolditalic-webfont.woff', __FILE__).'") format("woff");
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: "OpenDyslexic";
+    src: url("'.plugins_url('/fonts/opendyslexicalta-italic-webfont.woff2', __FILE__).'") format("woff2"),
+         url("'.plugins_url('/fonts/opendyslexicalta-italic-webfont.woff', __FILE__).'") format("woff");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "OpenDyslexic";
+    src: url("'.plugins_url('/fonts/opendyslexicalta-regular-webfont.woff2', __FILE__).'") format("woff2"),
+         url("'.plugins_url('/fonts/opendyslexicalta-regular-webfont.woff', __FILE__).'") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
 	*:not([class*="icon"]) { font-family:"OpenDyslexic"!important; }
 </style>';
 		}

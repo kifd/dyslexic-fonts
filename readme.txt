@@ -3,8 +3,8 @@ Contributors: keith_wp
 Donate Link: https://drakard.com/
 Tags: font, dyslexic font, custom font
 Requires at least: 3.8 or higher
-Tested up to: 5.6 alpha-49135
-Stable tag: 0.16
+Tested up to: 5.7
+Stable tag: 0.17
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,11 +30,19 @@ See https://opendyslexic.org/ for more information; this plugin simply lets user
 
 It's very possible that font choice won't make a difference (https://www.dyslexia-reading-well.com/dyslexia-font.html) and as the OpenDyslexic website says, it "is not supposed to be a cure, a complete solution, or something you should apply uniformly to everyone". But for the sake of a checkbox, it's nice to have the choice.
 
+= What browsers are supported? =
+
+Anything that can use [WOFF](https://caniuse.com/woff) or [WOFF2](https://caniuse.com/woff2) fonts, so pretty much all of them nowadays.
+
 
 == Screenshots ==
 
 
 == Changelog ==
+
+= 0.17 =
+* Tested with WP 5.7
+* Now uses WOFF/WOFF2 versions of the font instead of OTF
 
 = 0.16 =
 * Tested with WP 5.6 alpha-49135
